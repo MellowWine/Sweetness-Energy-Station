@@ -26,6 +26,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* 允许换行 */
 }
 
 nav .logo {
@@ -53,6 +54,7 @@ h1 {
   font-weight: 700;
   color: #be185d;
   margin-bottom: 1.5rem;
+  text-align: center; /* 标题居中更适合移动端 */
 }
 
 /* 卡片通用样式 */
@@ -99,4 +101,37 @@ h1 {
   background-color: #e5e7eb;
   color: #9ca3af;
   cursor: not-allowed;
+}
+
+
+/* --- RESPONSIVE STYLES --- */
+/* 当屏幕宽度小于 900px 时应用以下样式 */
+@media (max-width: 900px) {
+  #app {
+    padding: 1rem; /* 减小页面边距 */
+  }
+
+  nav {
+    flex-direction: column; /* 导航栏垂直排列 */
+    gap: 1rem; /* 增加项目间距 */
+  }
+
+  nav .logo {
+    margin-bottom: 0.5rem;
+  }
+  
+  nav div {
+    display: flex;
+    flex-wrap: wrap; /* 允许导航链接换行 */
+    justify-content: center; /* 居中导航链接 */
+    gap: 0.5rem 1rem;
+  }
+
+  nav a {
+    margin-left: 0; /* 移除左边距 */
+  }
+
+  h1 {
+    font-size: 2rem; /* 减小标题字号 */
+  }
 }

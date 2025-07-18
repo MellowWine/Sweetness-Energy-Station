@@ -69,6 +69,8 @@ function handleFileUpload(event, timelineId) {
     position: relative;
     background-color: inherit;
     width: 100%;
+    box-sizing: border-box;
+    /* 确保 padding 不会撑大宽度 */
 }
 
 .timeline-dot {
@@ -95,6 +97,8 @@ function handleFileUpload(event, timelineId) {
 
 .timeline-photo img {
     max-width: 100%;
+    height: auto;
+    /* 保证图片等比缩放 */
     border-radius: 8px;
     margin-top: 1rem;
 }
@@ -120,5 +124,28 @@ function handleFileUpload(event, timelineId) {
 
 .btn-upload:hover {
     background-color: #fce7f3;
+}
+
+/* --- RESPONSIVE STYLES for TimelineView --- */
+@media (max-width: 600px) {
+    .timeline-container::after {
+        left: 15px;
+        /* 时间线稍微向左移动 */
+    }
+
+    .timeline-item {
+        padding: 10px 20px 10px 30px;
+        /* 减小左右内边距 */
+    }
+
+    .timeline-dot {
+        left: 15px;
+        /* 圆点跟随时间线移动 */
+    }
+
+    .timeline-content {
+        margin-left: 15px;
+        /* 内容卡片也向左移动 */
+    }
 }
 </style>

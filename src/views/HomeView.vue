@@ -78,6 +78,9 @@ const store = useLoveStore();
   align-items: center;
   font-size: 1.2rem;
   margin-bottom: 1rem;
+  flex-wrap: wrap;
+  /* 允许换行 */
+  gap: 0.5rem;
 }
 
 .avatar {
@@ -122,6 +125,9 @@ const store = useLoveStore();
   align-items: center;
   padding: 0.8rem 0;
   border-bottom: 1px solid #f3f4f6;
+  flex-wrap: wrap;
+  /* 允许换行 */
+  gap: 0.5rem;
 }
 
 .list-item:last-child {
@@ -156,9 +162,36 @@ const store = useLoveStore();
   line-height: 1.5;
 }
 
+/* --- RESPONSIVE STYLES for HomeView --- */
 @media (max-width: 900px) {
   .home-grid {
     grid-template-columns: 1fr;
+    /* 关键：从两列布局变为单列布局 */
+  }
+
+  .top-banner {
+    padding: 1.5rem;
+  }
+
+  .users {
+    flex-direction: column;
+    /* 用户头像垂直排列 */
+    gap: 0.75rem;
+  }
+
+  .heart-connector {
+    transform: rotate(90deg);
+    /* 让爱心旋转90度适应垂直布局 */
+  }
+
+  .points-display {
+    font-size: 1.3rem;
+    /* 减小能量值字号 */
+  }
+
+  .points-display span {
+    font-size: 2rem;
+    /* 减小能量值数字字号 */
   }
 }
 </style>
