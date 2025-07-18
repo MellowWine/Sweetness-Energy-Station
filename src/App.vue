@@ -3,10 +3,10 @@
     <nav>
       <div class="logo">The Love Hub ❤️</div>
       <div>
-        <RouterLink to="/">仪表盘</RouterLink>
-        <RouterLink to="/quests">甜蜜任务</RouterLink>
-        <RouterLink to="/boutique">心愿精品</RouterLink>
-        <RouterLink to="/timeline">时光机</RouterLink>
+        <RouterLink to="/">爱情枢纽 The Love Hub</RouterLink>
+        <RouterLink to="/quests">甜蜜任务板 Sweet Quests Page</RouterLink>
+        <RouterLink to="/boutique">心愿精品店 Wish Boutique Page</RouterLink>
+        <RouterLink to="/timeline">我们的时光机 Memory Lane</RouterLink>
       </div>
     </nav>
   </header>
